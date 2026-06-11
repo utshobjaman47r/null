@@ -26,7 +26,7 @@ const restuturent = {
 
     },
     orderDilavery:function({staterIndex,mainIndex,time,address}){
-        console.log(`order recived !  ${this.startMenu[staterIndex]},and ${this.mainManus[mainIndex]} 
+        console.log(`order recived ! ${this.startMenu[staterIndex]},and ${this.mainManus[mainIndex]} 
             will be delivered ${address} on ${time}`);
 
     },

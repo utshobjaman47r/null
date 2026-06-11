@@ -103,7 +103,7 @@ const {home:house} = batman;
 // ({house} = batman.home)
 // // ({house}= batman);
 
-console.log(house);
+// console.log(house);
 
 
 const villain = {};
@@ -138,3 +138,4 @@ const missionDossier = {
 const {codename:commando, location : farmehouse } = missionDossier;
 
 console.log(commando,farmehouse);
+
