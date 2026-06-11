@@ -30,6 +30,10 @@ const restuturent = {
             will be delivered ${address} on ${time}`);
 
     },
+    orderPasta:function(ing1,ing2,ing3){
+        console.log(`here is your pasta with ${ing1},${ing2} and ${ing3}`)
+
+    }
 
 };
 
@@ -140,8 +144,37 @@ const home = {
 const arr =  [2,5,8,9];
 const newA = [10,11,12,...arr]
 
-console.log(newA);
-console.log(...newA);
+//console.log(newA);
+//console.log(...newA);
 
 const newMenu = [...restuturent.mainManus,"biriyani "]
-console.log(newMenu);
+//console.log(newMenu);
+
+//shallow copy 
+const mainMenuCopy  =  [...restuturent.mainManus];
+
+//  bind to array together 
+
+// const allMenu = [...restaurant.mainManus,...restaurant.startMenu];
+
+const allMenu =  [...restuturent.startMenu,...restuturent.mainManus];
+// console.log(...allMenu);
+
+
+
+const str = "utshob";
+
+const letters = [...str,"b"];
+console.log(letters);
+
+
+
+const ingredients = [
+    prompt("let's make pasta with , ingredient 1 "),
+    prompt("let's make pasta with , ingredient 2 "),
+    prompt("let's make pasta with , ingredient 3 ")
+];
+
+console.log(ingredients);
+
+restuturent.orderPasta(...ingredients);
