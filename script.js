@@ -25,7 +25,7 @@ const restuturent = {
         return [this.startMenu[staterIndex],this.mainManus[mainIndex]]
 
     },
-    orderDilavery:function({staterIndex,mainIndex,time,address}){
+    orderDilavery:function({staterIndex = 1,mainIndex = 1 ,time = "20:20 ",address}){
         console.log(`order recived ! ${this.startMenu[staterIndex]},and ${this.mainManus[mainIndex]} 
             will be delivered ${address} on ${time}`);
 
@@ -41,6 +41,10 @@ restuturent.orderDilavery({
 
 })
 
+restuturent.orderDilavery({
+    address : "wyne manner ",
+    mainIndex : 2, 
+}) 
 
 //object destrutcre 
 const {name,openingHours,categories}= restuturent;
