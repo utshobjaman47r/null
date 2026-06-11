@@ -39,12 +39,12 @@ restuturent.orderDilavery({
     mainIndex : 2,
     staterIndex: 2,
 
-})
+});
 
 restuturent.orderDilavery({
     address : "wyne manner ",
     mainIndex : 2, 
-}) 
+});
 
 //object destrutcre 
 const {name,openingHours,categories}= restuturent;
@@ -135,3 +135,13 @@ const home = {
 ({earth1,kriptonyete} = home);
 
 // console.log(earth1,kriptonyete);
+
+
+const arr =  [2,5,8,9];
+const newA = [10,11,12,...arr]
+
+console.log(newA);
+console.log(...newA);
+
+const newMenu = [...restuturent.mainManus,"biriyani "]
+console.log(newMenu);
