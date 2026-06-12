@@ -30,8 +30,8 @@ const restuturent = {
             will be delivered ${address} on ${time}`);
 
     },
-    orderPasta:function(animal1,animal2,animal3){
-        console.log(`here is your fram with ${animal1},${animal2} and ${animal3} animals `)
+    orderPasta:function(ing1,ing2,ing3){
+        console.log(`here is your pasta with ${ing1},${ing2} and ${ing3}`)
 
     }
 
@@ -169,14 +169,28 @@ console.log(letters);
 
 
 
-const myGfram = [
-    prompt("let's make a fram with , animal 1  "),
-    prompt("let's make a fram with ,  animal 2 "),
-    prompt("let's make a fram with , ingredient 3 ")
-];
+// const ingredients = [
+//     // prompt("let's make pasta with , ingredient 1 "),
+//     // prompt("let's make pasta with , ingredient 2 "),
+//     // prompt("let's make pasta with , ingredient 3 ")
+// ];
 
-console.log(myGfram);
+// console.log(ingredients);
 
 // restuturent.orderPasta(...ingredients);
 
-restuturent.orderPasta(...myGfram);
+// objcet 
+const newRestaurent = {funder:"lutfor jaman uthsob ", year : "2012",...restuturent};
+
+console.log(newRestaurent);
+
+
+const restaurantCopy  =  {...restuturent}
+
+restuturent.name = "frasy food and resturant ";
+
+console.log(restuturent.name);
+console.log(restaurantCopy.name);
+
+
+
