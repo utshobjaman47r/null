@@ -194,3 +194,19 @@ console.log(restaurantCopy.name);
 
 
 
+
+// rest operator unpack the array 
+
+const arrTw =[1,2,3,...[6,7,]];
+
+console.log(arrTw);
+
+const song = [1,2,3,4,...["get on the dance floor"]];
+
+console.log(song);
+
+
+const [a,b,...others] = ["batman ","godzilla","salman kahn ","sharukh khan","null"];
+
+console.log(a,b,others);
+
