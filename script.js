@@ -5,7 +5,7 @@ const restuturent = {
     location    :"Via angelo Taveant 23 , Frinze, Itally",
     categories  :["Italian","Pizza","Vegetarian","Organic Shit "],
     startMenu   : ["Focaccia","Bruschetta","garlic Bread ","caprese salad "],
-    mainManus   : ["pizza","pasta","allu vorta dalul dia "],
+    mainManus   : ["pizza","pasta","resato"],
     openingHours:{
         thus:{
             open  : 12,
@@ -195,7 +195,8 @@ console.log(restaurantCopy.name);
 
 
 
-// rest operator unpack the array 
+// spred operetor  basically in the right side of = operator
+//  or ... spread opereator  remains  inside of object litaral or array  
 
 const arrTw =[1,2,3,...[6,7,]];
 
@@ -205,8 +206,22 @@ const song = [1,2,3,4,...["get on the dance floor"]];
 
 console.log(song);
 
-
+// rest operator usually on the left hean side of = 
 const [a,b,...others] = ["batman ","godzilla","salman kahn ","sharukh khan","null"];
 
 console.log(a,b,others);
+
+
+
+const [pizza, ,resato,othersFoods ]=[...restuturent.mainManus,restuturent.startMenu];
+
+console.log(pizza,resato,othersFoods );
+
+
+// objects 
+
+const {sat , ...weekdays} = restuturent.openingHours; 
+
+console.log(weekdays);
+
 
