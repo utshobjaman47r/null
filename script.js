@@ -211,7 +211,7 @@ const [a,b,...others] = ["batman ","godzilla","salman kahn ","sharukh khan","nul
 
 console.log(a,b,others);
 
-
+// destructreing 
 
 const [pizza, ,resato,othersFoods ]=[...restuturent.mainManus,restuturent.startMenu];
 
@@ -223,5 +223,36 @@ console.log(pizza,resato,othersFoods );
 const {sat , ...weekdays} = restuturent.openingHours; 
 
 console.log(weekdays);
+console.log(sat);
 
+
+
+// functions 
+
+
+// const add = function (...number){
+//     let sum = 0;
+//     for(let i = 0; i < number.length ; i++ )
+//         sum = sum + number[i];
+    
+//     console.log(sum)
+
+// };
+
+// add(12,4,5,3,6)
+// add(2,7,9,6);
+// add(5,6,7);
+// add(2,2);
+
+const add2 = function(...num){
+    let divied = 0;
+    for(let i = 0; i< num.length ; i++)
+        divied = divied - num[i];
+    console.log(divied)
+
+};
+
+add2(2 , 2);
+add2(2,3,4,89,7);
+add2(8,7,96,1000);
 
