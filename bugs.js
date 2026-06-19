@@ -139,3 +139,15 @@ const {codename:commando, location : farmehouse } = missionDossier;
 
 console.log(commando,farmehouse);
 
+
+const add2 = function(...num){
+    let minus = num[0];
+    for(let i = 0; i< num.length ; i++)
+        minus = minus - num[i];
+    console.log(minus)
+
+};
+
+add2(2 , 2);
+add2(2,3,4,89,7);
+add2(8,7,96,1000); 

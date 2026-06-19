@@ -33,6 +33,11 @@ const restuturent = {
     orderPasta:function(ing1,ing2,ing3){
         console.log(`here is your pasta with ${ing1},${ing2} and ${ing3}`)
 
+    },
+
+    orderPizza:function(mianIngredent,...others){
+        console.log(mianIngredent);
+        console.log(others);
     }
 
 };
@@ -227,32 +232,34 @@ console.log(sat);
 
 
 
-// functions 
+//functions 
 
 
-// const add = function (...number){
-//     let sum = 0;
-//     for(let i = 0; i < number.length ; i++ )
-//         sum = sum + number[i];
+const add = function (...number){
+    let sum = 0;
+    for(let i = 0; i < number.length ; i++ )
+        sum = sum + number[i];
     
-//     console.log(sum)
-
-// };
-
-// add(12,4,5,3,6)
-// add(2,7,9,6);
-// add(5,6,7);
-// add(2,2);
-
-const add2 = function(...num){
-    let divied = 0;
-    for(let i = 0; i< num.length ; i++)
-        divied = divied - num[i];
-    console.log(divied)
+    console.log(sum)
 
 };
 
-add2(2 , 2);
-add2(2,3,4,89,7);
-add2(8,7,96,1000);
+
+
+
+add(12,4,5,3,6)
+add(2,7,9,6);
+add(5,6,7);
+add(2,2);
+
+
+
+const mj = [2,4,8,9];
+add(...mj);
+
+
+//restuturent.orderPizza("mushroom","olive","onin","spinish");
+restuturent.orderPizza("mushroom","olive","onin","spnish");
+
+restuturent.orderPizza("mushroom");
 
