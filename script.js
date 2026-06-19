@@ -263,3 +263,37 @@ restuturent.orderPizza("mushroom","olive","onin","spnish");
 
 restuturent.orderPizza("mushroom");
 
+
+// logical opereator 
+
+
+
+
+console.log(45 || "uthsob");
+
+console.log("" || "uthosb ");
+
+console.log(0 || "allha huakbar ");
+
+console.log(true || flase);
+console.log(undefined || null);
+
+console.log("salman khan " &&  "uthosb");
+
+console.log("" && "utshob");
+
+console.log(null && "denli national park ");
+console.log(null && undefined );
+
+
+console.log("milkeyway" && undefined);
+
+// restuturent.numGuest = 40;
+// restuturent.numGuest = 45;
+
+const guest1 = restuturent.numGuest ? restuturent.numGuest : 10;
+
+console.log(guest1);
+
+const guest2 = restuturent.numGuest || 10 ;
+console.log(guest2);
