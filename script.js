@@ -192,7 +192,7 @@ console.log(newRestaurent);
 
 const restaurantCopy  =  {...restuturent}
 
-restuturent.name = "frasy food and resturant ";
+restuturent.name = "frasy food and restaurant ";
 
 console.log(restuturent.name);
 console.log(restaurantCopy.name);
@@ -268,7 +268,6 @@ restuturent.orderPizza("mushroom");
 
 
 
-
 console.log(45 || "uthsob");
 
 console.log("" || "uthosb ");
@@ -277,6 +276,18 @@ console.log(0 || "allha huakbar ");
 
 console.log(true || flase);
 console.log(undefined || null);
+
+
+// restuturent.numGuest = 40;
+// restuturent.numGuest = 45;
+
+const guest1 = restuturent.numGuest ? restuturent.numGuest : 10;
+
+console.log(guest1);
+
+const guest2 = restuturent.numGuest || 10 ;
+console.log(guest2);
+
 
 console.log("salman khan " &&  "uthosb");
 
@@ -288,12 +299,12 @@ console.log(null && undefined );
 
 console.log("milkeyway" && undefined);
 
-// restuturent.numGuest = 40;
-// restuturent.numGuest = 45;
+console.log("hello"&& 45 &&"hi" && "nothing " && null && "knock");
 
-const guest1 = restuturent.numGuest ? restuturent.numGuest : 10;
 
-console.log(guest1);
 
-const guest2 = restuturent.numGuest || 10 ;
-console.log(guest2);
+if(restuturent.orderPizza){
+    restuturent.orderPizza("mushroom","spinech")
+};
+
+restuturent.orderPizza && restuturent.orderPizza("mushroom","spinech");

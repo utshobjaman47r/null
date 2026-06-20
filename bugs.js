@@ -151,3 +151,15 @@ const add2 = function(...num){
 add2(2 , 2);
 add2(2,3,4,89,7);
 add2(8,7,96,1000); 
+
+console.log("Batman" || "Superman"); 
+console.log(false || 0 || "" || "Iron Man" || 42);
+console.log(undefined || null || NaN || 0);
+
+console.log("Pizza" && "Burger" && "Pasta");
+
+console.log(true && "Secret Message" && 0 && "Hidden Gold");
+
+
+console.log("Cat" && "Dog" || "Bird");
+console.log("" && "Apple" || "Banana" && "Cherry"); 
