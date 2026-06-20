@@ -278,6 +278,11 @@ console.log(true || flase);
 console.log(undefined || null);
 
 
+
+// nullish qualasin operator works with only nullish values 
+// nullish values are null undefined not 0 or emty string ""
+
+
 // restuturent.numGuest = 40;
 restuturent.numGuest = 0;
 const guest1 = restuturent.numGuest ?? 10;
@@ -308,3 +313,23 @@ console.log(guest2);
 
 // restuturent.orderPizza && restuturent.orderPizza("mushroom","spinech");
 // us
+
+
+const res1 = {
+    name : "the denli resturant and food leb ", 
+    numGuest: 27,
+};
+
+const res2 = {
+    name  :"no food here restaurent ",
+    owner :"uthsob ",
+    numGuest : 0, 
+};
+
+
+res1.numGuest = res1.numGuest || 10 ;
+res2.numGuest = res2.numGuest || 10 ;
+
+
+console.log(res1);
+console.log(res2);
