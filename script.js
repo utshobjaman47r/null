@@ -327,8 +327,12 @@ const res2 = {
 };
 
 
-res1.numGuest = res1.numGuest || 10 ;
-res2.numGuest = res2.numGuest || 10 ;
+// res1.numGuest = res1.numGuest || 10 ;
+// res2.numGuest = res2.numGuest || 10 ;
+
+res1.numGuest ||= 10;
+res2.numGuest ||= 10;
+
 
 
 console.log(res1);
