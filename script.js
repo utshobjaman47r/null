@@ -326,7 +326,7 @@ const res2 = {
     numGuest : 0, 
 };
 
-
+// or assignment operator 
 // res1.numGuest = res1.numGuest || 10 ;
 // res2.numGuest = res2.numGuest || 10 ;
 
@@ -337,6 +337,12 @@ res1.numGuest ??= 10;
 res2.numGuest ??= 10;
 
 
+res1.owner = res1.owner && "the ower is hidden "
+res2.owner = res2.owner && "the ower is hidden "
+
+
 
 console.log(res1);
+console.log(res2);
+
 console.log(res2);
