@@ -279,32 +279,32 @@ console.log(undefined || null);
 
 
 // restuturent.numGuest = 40;
-// restuturent.numGuest = 45;
-
-const guest1 = restuturent.numGuest ? restuturent.numGuest : 10;
-
+restuturent.numGuest = 0;
+const guest1 = restuturent.numGuest ?? 10;
 console.log(guest1);
 
-const guest2 = restuturent.numGuest || 10 ;
+const guest2 = restuturent.numGuest ?? 10 ;
 console.log(guest2);
 
 
-console.log("salman khan " &&  "uthosb");
 
-console.log("" && "utshob");
+//console.log("salman khan " &&  "uthosb");
 
-console.log(null && "denli national park ");
-console.log(null && undefined );
+// console.log("" && "utshob");
 
-
-console.log("milkeyway" && undefined);
-
-console.log("hello"&& 45 &&"hi" && "nothing " && null && "knock");
+// console.log(null && "denli national park ");
+// console.log(null && undefined );
 
 
+// console.log("milkeyway" && undefined);
 
-if(restuturent.orderPizza){
-    restuturent.orderPizza("mushroom","spinech")
-};
+// console.log("hello"&& 45 &&"hi" && "nothing " && null && "knock");
 
-restuturent.orderPizza && restuturent.orderPizza("mushroom","spinech");
+
+
+// if(restuturent.orderPizza){
+//     restuturent.orderPizza("mushroom","spinech")
+// };
+
+// restuturent.orderPizza && restuturent.orderPizza("mushroom","spinech");
+// us
