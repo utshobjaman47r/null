@@ -333,8 +333,10 @@ const res2 = {
 // res1.numGuest ||= 10;
 // res2.numGuest ||= 10;
 
+// res1.numGuest = res1.numGuest ?? 10 ;
 res1.numGuest ??= 10;
 res2.numGuest ??= 10;
+
 
 
 res1.owner = res1.owner && "the ower is hidden "
@@ -346,3 +348,57 @@ console.log(res1);
 console.log(res2);
 
 console.log(res2);
+
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+
+const [players1, players2] = game.players;
+
+console.log(players1,players2);
+
+const [gk1,...othersP]  = players1;
+const [gk2,...othersPlayers]  = players2;
+console.log(gk1,othersP);
+console.log(gk2,othersPlayers);
+
+
