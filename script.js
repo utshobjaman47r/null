@@ -268,14 +268,14 @@ restuturent.orderPizza("mushroom");
 
 
 
-console.log(45 || "uthsob");
+// console.log(45 || "uthsob");
 
-console.log("" || "uthosb ");
+// console.log("" || "uthosb ");
 
-console.log(0 || "allha huakbar ");
+// console.log(0 || "allha huakbar ");
 
-console.log(true || flase);
-console.log(undefined || null);
+// console.log(true || flase);
+// console.log(undefined || null);
 
 
 
@@ -286,10 +286,10 @@ console.log(undefined || null);
 // restuturent.numGuest = 40;
 restuturent.numGuest = 0;
 const guest1 = restuturent.numGuest ?? 10;
-console.log(guest1);
+// console.log(guest1);
 
 const guest2 = restuturent.numGuest ?? 10 ;
-console.log(guest2);
+// console.log(guest2);
 
 
 
@@ -344,10 +344,10 @@ res2.owner = res2.owner && "the ower is hidden "
 
 
 
-console.log(res1);
-console.log(res2);
+// console.log(res1);
+// console.log(res2);
 
-console.log(res2);
+// console.log(res2);
 
 
 const game = {
@@ -394,7 +394,7 @@ const game = {
 
 const [players1, players2] = game.players;
 
-console.log(players1,players2);
+// console.log(players1,players2);
 
 // const [gk1,...othersP]  = players1;
 // const [gk2,...othersPlayers]  = players2;
@@ -405,16 +405,25 @@ console.log(players1,players2);
 const [gk, ...fieldPlayers] = players1;
 
 // Testing the output:
-console.log(gk);
-console.log(fieldPlayers);
+// console.log(gk);
+// console.log(fieldPlayers);
 
 
-// const players1Final = { ...game.team1, "thiago","cutioho "}
 
-// const players1Final = {...game.team2,};
 
-// const players1Final2 = [...players1Final,"diago ", "coutinho ","parisic"];
-// console.log(players1Final2);
+// const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 
-const players1Final = [...players1,"batman ", "super man "];
-console.log(players1Final)
+// console.log(players1Final); 
+
+
+
+const menuTs = [...restuturent.mainManus, ...restuturent.startMenu];
+
+console.log(menuTs);
+
+
+for(const item of menuTs){
+    console.log(item)
+};
+
+
