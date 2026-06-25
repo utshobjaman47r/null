@@ -431,8 +431,9 @@ for(const item of menuTs){
 };
 
 
-for(const item of menuTs.entries()){
-    console.log(`${item[0] + 1} : ${item[1]}`)
+for(const [i,el ] of menuTs.entries()){
+    console.log(`${i+1} : ${el}`)
 
 };
+
 
