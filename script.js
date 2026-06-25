@@ -268,14 +268,14 @@ restuturent.orderPizza("mushroom");
 
 
 
-// console.log(45 || "uthsob");
+console.log(45 || "uthsob");
 
-// console.log("" || "uthosb ");
+console.log("" || "uthosb ");
 
-// console.log(0 || "allha huakbar ");
+console.log(0 || "allha huakbar ");
 
-// console.log(true || flase);
-// console.log(undefined || null);
+console.log(true || flase);
+console.log(undefined || null);
 
 
 
@@ -286,10 +286,10 @@ restuturent.orderPizza("mushroom");
 // restuturent.numGuest = 40;
 restuturent.numGuest = 0;
 const guest1 = restuturent.numGuest ?? 10;
-// console.log(guest1);
+console.log(guest1);
 
 const guest2 = restuturent.numGuest ?? 10 ;
-// console.log(guest2);
+console.log(guest2);
 
 
 
@@ -333,10 +333,8 @@ const res2 = {
 // res1.numGuest ||= 10;
 // res2.numGuest ||= 10;
 
-// res1.numGuest = res1.numGuest ?? 10 ;
 res1.numGuest ??= 10;
 res2.numGuest ??= 10;
-
 
 
 res1.owner = res1.owner && "the ower is hidden "
@@ -344,10 +342,16 @@ res2.owner = res2.owner && "the ower is hidden "
 
 
 
-// console.log(res1);
-// console.log(res2);
+console.log(res1);
+console.log(res2);
 
-// console.log(res2);
+console.log(res2);
+
+
+const mainTs = [...restuturent.mainManus,...restuturent.startMenu];
+
+console.log(mainTs)
+
 
 
 const game = {
@@ -426,4 +430,9 @@ for(const item of menuTs){
     console.log(item)
 };
 
+
+for(const item of menuTs.entries()){
+    console.log(`${item[0] + 1} : ${item[1]}`)
+
+};
 
