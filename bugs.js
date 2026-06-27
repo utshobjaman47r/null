@@ -163,3 +163,56 @@ console.log(true && "Secret Message" && 0 && "Hidden Gold");
 
 console.log("Cat" && "Dog" || "Bird");
 console.log("" && "Apple" || "Banana" && "Cherry"); 
+
+
+const fruits = ["apple", "banana", "mango"];
+
+//for (const [index, value] of fruits.entries()) {
+    //console.log(`${index}: ${value}`);
+//}
+
+
+for(const[i,f] of fruits.entries()){
+  console.log(`${i + 1} : ${f}`) // i + 1 means i is an array and array start form 0  then add 1 ;  
+
+};
+
+
+
+
+const students = ["Alice", "Bob", "Charlie"];
+
+for(const [i,name] of students.entries()){
+  console.log(`studnet #${i + 1 } is ${name} `)
+};
+
+
+const cars = ["formula 1","audi s9","roketbunny"];
+
+const [f1,a8,rk9] = cars;
+console.log(f1);
+console.log(a8);
+console.log(rk9);
+
+
+
+const movies = ["Inception", "Titanic", "Coco"];
+
+
+for(const [i,moivesName]  of movies.entries() ){
+  console.log(`show time #${i +1 } : ${moivesName}`)
+
+
+};
+
+
+const tasks = ["Buy groceries", "Walk the dog", "Finish homework", "Call mom"];
+
+for(const[i,work] of tasks.entries()){
+  const postion = i + 1;
+  if(postion % 2 === 0 ){
+    console.log(`task number ${postion} : task${work}`)
+
+  }
+
+};
