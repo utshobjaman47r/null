@@ -450,3 +450,33 @@ for(const day of days ){
     console.log(`on ${day}, we open on ${open}`);
 };
 
+
+console.log(restuturent.order?.(0,1) ?? "the method is not excist ");
+
+
+console.log(restuturent.orderBATstack?.(0,1) ?? "the method is not excist ");
+
+//  arrays 
+
+const user =  [
+    {name :"ballu bhai ",email: "amaremailnai@gmail.com"},
+    {name :"utshob",email: "uthsobjaman2012@email.com"},
+];
+
+console.log(user[0] ?. name ?? "the user is empty ");
+console.log(user[1] ?. name ?? "the user is empty ");
+console.log(user[2] ?. name ?? "the user is empty ");
+
+
+// other wise 
+console.log("hello")
+if(user.length > 0){
+    console.log(user[0].name);
+}else {
+    console.log("there is not difined ")
+};
+if(user.length > 0){
+    console.log(user[1].name);
+}else {
+    console.log("there is not difined ")
+};
