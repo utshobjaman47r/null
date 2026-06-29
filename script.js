@@ -55,6 +55,8 @@ restuturent.orderDilavery({
     mainIndex : 2, 
 });
 
+
+
 //object destrutcre 
 const {name,openingHours,categories}= restuturent;
 // console.log(name,openingHours,categories);
@@ -426,4 +428,25 @@ for(const item of menuTs){
     console.log(item)
 };
 
+
+
+if(restuturent.openingHours && restuturent.openingHours.mon){
+
+    console.log(restuturent.openingHours.mon.open);
+
+};
+
+console.log(restuturent.openingHours.mon ?. open)
+
+
+
+
+
+const days =  ["mon","tues","wed","thus","fri","san","sat"];
+
+for(const day of days ){
+    //console.log(day)
+    const open = restuturent.openingHours[day] ?. open ?? "closed ";
+    console.log(`on ${day}, we open on ${open}`);
+};
 
