@@ -163,3 +163,17 @@ console.log(true && "Secret Message" && 0 && "Hidden Gold");
 
 console.log("Cat" && "Dog" || "Bird");
 console.log("" && "Apple" || "Banana" && "Cherry"); 
+
+
+let count = 0;
+
+console.log( 0||10 );
+console.log( 0??10 );
+
+
+let name = null ; 
+
+console.log(name || "batman");
+
+console.log(name ?? "ballu bhaya");
+
