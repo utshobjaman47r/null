@@ -480,3 +480,17 @@ if(user.length > 0){
 }else {
     console.log("there is not difined ")
 };
+
+
+const porperties = Object.keys(openingHours);
+console.log(porperties);
+
+let openStr = `we open at ${porperties.length} days `;
+
+
+for(const day  of porperties ){
+    openStr+= `${day}, `
+};
+
+
+console.log(openStr);

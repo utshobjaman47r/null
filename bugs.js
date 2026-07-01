@@ -177,3 +177,11 @@ console.log(name || "batman");
 
 console.log(name ?? "ballu bhaya");
 
+
+const utshob = null ?? "i want a car ";
+
+const values  =  0 ?? 99 ;
+
+console.log(utshob);
+
+console.log(values);
