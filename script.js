@@ -1,26 +1,36 @@
 "use strict"; 
 
+const weekdays = ["mon","tue","wed","thus","fri","sat","sun"]
+const openingHours ={
+        [weekdays[3]]:{
+            open  : 12,
+            colse : 22 
+        },
+        [weekdays[4]]:{
+            open: 11,
+            close: 23,
+        },
+        [weekdays[5]]:{
+            open : 0,
+            close : 24,
+        }
+
+    };
+
+
+
+
 const restuturent = {
     name        :"Classico Italiano ",
     location    :"Via angelo Taveant 23 , Frinze, Itally",
     categories  :["Italian","Pizza","Vegetarian","Organic Shit "],
     startMenu   : ["Focaccia","Bruschetta","garlic Bread ","caprese salad "],
     mainManus   : ["pizza","pasta","resato"],
-    openingHours:{
-        thus:{
-            open  : 12,
-            colse : 22 
-        },
-        fri:{
-            open: 11,
-            close: 23,
-        },
-        sat:{
-            open : 0,
-            close : 24,
-        }
 
-    },
+    // in ES6 model we can still get the object byound the scope and use it as a object porperty . just  write the object . 
+
+    openingHours,
+    
     order : function(staterIndex,mainIndex){
         return [this.startMenu[staterIndex],this.mainManus[mainIndex]]
 
@@ -56,7 +66,7 @@ restuturent.orderDilavery({
 });
 
 //object destrutcre 
-const {name,openingHours,categories}= restuturent;
+// const {name,openingHours,categories}= restuturent;
 // console.log(name,openingHours,categories);
 
  const {name:restaurantName,openingHours:hours,categories:tags} = restuturent;
@@ -225,10 +235,10 @@ console.log(pizza,resato,othersFoods );
 
 // objects 
 
-const {sat , ...weekdays} = restuturent.openingHours; 
+// const {sat , ...weekdays} = restuturent.openingHours; 
 
-console.log(weekdays);
-console.log(sat);
+// console.log(weekdays);
+// console.log(sat);
 
 
 
@@ -437,3 +447,22 @@ for(const [i,el ] of menuTs.entries()){
 };
 
 
+
+const userBushra = [
+    { name :"bushra",
+      email:  "bushraonty@gmail.com",
+    }
+];
+
+console.log(userBushra[0]?.name ?? "the user is not aviaable");
+
+
+
+
+const porpertyies = Object.keys(openingHours);
+
+console.log(porpertyies);
+
+const porpertyiesV = Object.values(openingHours);
+
+console.log(porpertyiesV);
