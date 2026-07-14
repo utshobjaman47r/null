@@ -65,6 +65,8 @@ restuturent.orderDilavery({
     mainIndex : 2, 
 });
 
+
+
 //object destrutcre 
 // const {name,openingHours,categories}= restuturent;
 // console.log(name,openingHours,categories);
@@ -441,28 +443,68 @@ for(const item of menuTs){
 };
 
 
-for(const [i,el ] of menuTs.entries()){
-    console.log(`${i+1} : ${el}`)
+
+if(restuturent.openingHours && restuturent.openingHours.mon){
+
+    console.log(restuturent.openingHours.mon.open);
 
 };
 
+console.log(restuturent.openingHours.mon ?. open)
 
 
-const userBushra = [
-    { name :"bushra",
-      email:  "bushraonty@gmail.com",
-    }
+
+
+
+const days =  ["mon","tues","wed","thus","fri","san","sat"];
+
+for(const day of days ){
+    //console.log(day)
+    const open = restuturent.openingHours[day] ?. open ?? "closed ";
+    console.log(`on ${day}, we open on ${open}`);
+};
+
+
+console.log(restuturent.order?.(0,1) ?? "the method is not excist ");
+
+
+console.log(restuturent.orderBATstack?.(0,1) ?? "the method is not excist ");
+
+//  arrays 
+
+const user =  [
+    {name :"ballu bhai ",email: "amaremailnai@gmail.com"},
+    {name :"utshob",email: "uthsobjaman2012@email.com"},
 ];
 
-console.log(userBushra[0]?.name ?? "the user is not aviaable");
+console.log(user[0] ?. name ?? "the user is empty ");
+console.log(user[1] ?. name ?? "the user is empty ");
+console.log(user[2] ?. name ?? "the user is empty ");
 
 
+// other wise 
+console.log("hello")
+if(user.length > 0){
+    console.log(user[0].name);
+}else {
+    console.log("there is not difined ")
+};
+if(user.length > 0){
+    console.log(user[1].name);
+}else {
+    console.log("there is not difined ")
+};
 
 
-const porpertyies = Object.keys(openingHours);
+const porperties = Object.keys(openingHours);
+console.log(porperties);
 
-console.log(porpertyies);
+let openStr = `we open at ${porperties.length} days `;
 
-const porpertyiesV = Object.values(openingHours);
 
-console.log(porpertyiesV);
+for(const day  of porperties ){
+    openStr+= `${day}, `
+};
+
+
+console.log(openStr);

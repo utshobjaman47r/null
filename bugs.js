@@ -165,6 +165,7 @@ console.log("Cat" && "Dog" || "Bird");
 console.log("" && "Apple" || "Banana" && "Cherry"); 
 
 
+<<<<<<< HEAD
 const fruits = ["apple", "banana", "mango"];
 
 //for (const [index, value] of fruits.entries()) {
@@ -216,3 +217,25 @@ for(const[i,work] of tasks.entries()){
   }
 
 };
+=======
+let count = 0;
+
+console.log( 0||10 );
+console.log( 0??10 );
+
+
+let name = null ; 
+
+console.log(name || "batman");
+
+console.log(name ?? "ballu bhaya");
+
+
+const utshob = null ?? "i want a car ";
+
+const values  =  0 ?? 99 ;
+
+console.log(utshob);
+
+console.log(values);
+>>>>>>> 84ffcf23e6bbb805411525e4e8cb9a6fcfe1dc1b
