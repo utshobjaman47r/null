@@ -508,3 +508,22 @@ for(const day  of porperties ){
 
 
 console.log(openStr);
+
+// values 
+
+
+const valuesb = Object.values(openingHours);
+
+console.log(valuesb);
+
+
+// entire object 
+
+const entires = Object.entries(openingHours);
+
+console.log(entires)
+
+
+
+
+
