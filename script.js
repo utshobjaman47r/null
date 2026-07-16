@@ -4,7 +4,7 @@ const weekdays = ["mon","tue","wed","thus","fri","sat","sun"]
 const openingHours ={
         [weekdays[3]]:{
             open  : 12,
-            colse : 22 
+            close : 22 
         },
         [weekdays[4]]:{
             open: 11,
@@ -524,6 +524,32 @@ const entires = Object.entries(openingHours);
 console.log(entires)
 
 
+for(const [key,{ open, close }] of entires){
+    console.log(`on ${key}, we open at ${open} and colse at ${close}`)
+
+};
+
+
+
+
+
+// sets  are the unique values 
+
+const orderSet = new Set([
+    "pizza",
+    "pasta",
+    "resato",
+    "macoroni chese",
+    "resato",
+    "pasta",
+    "resato",  
+    "pasta",
+    "resato",
+
+
+]);
+
+console.log(orderSet);
 
 
 
