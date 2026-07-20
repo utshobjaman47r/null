@@ -595,3 +595,16 @@ console.log(uniqueStaffs);
 
 console.log(new Set(staffs).size);
 
+//  maps 
+
+
+const rest =  new Map();
+
+rest.set("name","food for you ");
+rest.set(1,"fornt of the galaxy appartmanet ");
+rest.set(2," beside the Wyne Manner");
+
+console.log(rest);
+console.log(rest.set("catagoris",["Italian","Pizza","Vegetarian","Organic Shit "]).set("open",11).set("close",12));
+
+
