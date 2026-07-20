@@ -553,3 +553,45 @@ console.log(orderSet);
 
 
 
+const name = new Set("bushraaaaaa");
+
+console.log(name);
+console.log(orderSet.size);
+
+
+console.log(orderSet.has("pasta"));
+console.log(orderSet.has("bushra "));
+console.log(orderSet.has("uthsob "));
+
+orderSet.add("bushra does love utshob");
+orderSet.add("water bottle ");
+
+
+
+
+console.log(orderSet);
+console.log(orderSet.has("bushra"));
+console.log(orderSet.has("uthsob hate bushra "));
+
+
+orderSet.delete("water bottle ");
+// orderSet.clear()
+console.log(orderSet);
+
+for(const order of orderSet){
+    console.log(order)
+};
+
+
+// real life  example 
+
+const staffs  =  ["waiter ","doorman","maneger","waiter ","chasiar","no one","waiter "];
+
+console.log(staffs);
+
+const uniqueStaffs =[...new Set(staffs)];
+
+console.log(uniqueStaffs);
+
+console.log(new Set(staffs).size);
+
