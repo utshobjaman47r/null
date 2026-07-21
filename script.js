@@ -605,6 +605,42 @@ rest.set(1,"fornt of the galaxy appartmanet ");
 rest.set(2," beside the Wyne Manner");
 
 console.log(rest);
-console.log(rest.set("catagoris",["Italian","Pizza","Vegetarian","Organic Shit "]).set("open",11).set("close",12));
+console.log(
+    rest.set("catagoris",["Italian","Pizza","Vegetarian","Organic Shit "])
+    .set("open",11)
+    .set("close",23)
+    .set(true,"we are open ")
+    .set(false, "the door is closed "),
+);
+console.log("the resturent name is ")
+console.log(rest.get("name"));
+console.log("you shit assholses can find it in ")
+console.log(rest.get(1));
+console.log("if you have no money then !!!")
+console.log(rest.get(false));
+
+
+
+
+
+const yourWishes  = new Map();
+
+yourWishes.set("bike","i want three catagoris of bike");
+yourWishes.set("technology","i have to computer and in future i would love to updarade ");
+yourWishes.set("for fture","need a cyle and fram and tracktor");
+yourWishes.set("lost love","to      see boushra to have a beautiful life that's all ");
+yourWishes.set("last wish"," see my parants proud and always be with them like batman");
+
+
+console.log(yourWishes.get("bike"));
+console.log(yourWishes.get("for fture"));
+console.log(yourWishes.get("last wish"));
+console.log(yourWishes.get("lost love"));
+
+
+const time = 21;
+
+
+console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
 
 
