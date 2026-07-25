@@ -4,7 +4,7 @@ const weekdays = ["mon","tue","wed","thus","fri","sat","sun"]
 const openingHours ={
         [weekdays[3]]:{
             open  : 12,
-            colse : 22 
+            close : 22 
         },
         [weekdays[4]]:{
             open: 11,
@@ -509,13 +509,142 @@ for(const day  of porperties ){
 
 console.log(openStr);
 
+// values 
 
-const userNameBushra = [
-    {
-        name  : "bushra afzal onty",
-        email : ""
-    }
-];
 
-console.log(userNameBushra[0]?.name || "the user is not avialble ");
+const valuesb = Object.values(openingHours);
+
+console.log(valuesb);
+
+
+// entire object 
+
+const entires = Object.entries(openingHours);
+
+console.log(entires)
+
+
+for(const [key,{ open, close }] of entires){
+    console.log(`on ${key}, we open at ${open} and colse at ${close}`)
+
+};
+
+
+
+
+
+// sets  are the unique values 
+
+const orderSet = new Set([
+    "pizza",
+    "pasta",
+    "resato",
+    "macoroni chese",
+    "resato",
+    "pasta",
+    "resato",  
+    "pasta",
+    "resato",
+
+
+]);
+
+console.log(orderSet);
+
+
+
+const name = new Set("bushraaaaaa");
+
+console.log(name);
+console.log(orderSet.size);
+
+
+console.log(orderSet.has("pasta"));
+console.log(orderSet.has("bushra "));
+console.log(orderSet.has("uthsob "));
+
+orderSet.add("bushra does love utshob");
+orderSet.add("water bottle ");
+
+
+
+
+console.log(orderSet);
+console.log(orderSet.has("bushra"));
+console.log(orderSet.has("uthsob hate bushra "));
+
+
+orderSet.delete("water bottle ");
+// orderSet.clear()
+console.log(orderSet);
+
+for(const order of orderSet){
+    console.log(order)
+};
+
+
+// real life  example 
+
+const staffs  =  ["waiter ","doorman","maneger","waiter ","chasiar","no one","waiter "];
+
+console.log(staffs);
+
+const uniqueStaffs =[...new Set(staffs)];
+
+console.log(uniqueStaffs);
+
+console.log(new Set(staffs).size);
+
+//  maps 
+
+
+const rest =  new Map();
+
+rest.set("name","food for you ");
+rest.set(1,"fornt of the galaxy appartmanet ");
+rest.set(2," beside the Wyne Manner");
+
+console.log(rest);
+console.log(
+    rest.set("catagoris",["Italian","Pizza","Vegetarian","Organic Shit "])
+    .set("open",11)
+    .set("close",23)
+    .set(true,"we are open ")
+    .set(false, "the door is closed "),
+);
+console.log("the resturent name is ")
+console.log(rest.get("name"));
+console.log("you shit assholses can find it in ")
+console.log(rest.get(1));
+console.log("if you have no money then !!!")
+console.log(rest.get(false));
+
+
+
+
+
+const yourWishes  = new Map();
+
+yourWishes.set("bike","i want three catagoris of bike");
+yourWishes.set("technology","i have to computer and in future i would love to updarade ");
+yourWishes.set("for fture","need a cyle and fram and tracktor");
+yourWishes.set("lost love","to      see boushra to have a beautiful life that's all ");
+yourWishes.set("last wish"," see my parants proud and always be with them like batman");
+
+
+console.log(yourWishes.get("bike"));
+console.log(yourWishes.get("for fture"));
+console.log(yourWishes.get("last wish"));
+console.log(yourWishes.get("lost love"));
+
+
+const time = 21;
+
+
+console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
+
+
+
+
+
 
