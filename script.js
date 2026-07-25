@@ -508,3 +508,14 @@ for(const day  of porperties ){
 
 
 console.log(openStr);
+
+
+const userNameBushra = [
+    {
+        name  : "bushra afzal onty",
+        email : ""
+    }
+];
+
+console.log(userNameBushra[0]?.name || "the user is not avialble ");
+
