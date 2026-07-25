@@ -638,13 +638,23 @@ console.log(yourWishes.get("last wish"));
 console.log(yourWishes.get("lost love"));
 
 
-const time = 21;
+const time = 10;
 
 
 console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
 
 
+console.log(rest.has("catagoris"));
 
+console.log(rest.has("batman"));
 
+rest.delete(2);
 
+console.log(rest);
+
+rest.delete("name");
+console.log(rest);
+
+console.log(rest.size);
+console.log(rest.clear);
 
