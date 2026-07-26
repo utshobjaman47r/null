@@ -658,3 +658,11 @@ console.log(rest);
 console.log(rest.size);
 console.log(rest.clear);
 
+// we can not call dritecly the array as variable in side the map so we need to store someware else and then call it 
+
+const arrayt  = [1,32] 
+rest.set(arrayt,"i become null again "); 
+
+console.log(rest.get(arrayt));
+
+
