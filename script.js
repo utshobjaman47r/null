@@ -686,6 +686,45 @@ console.log(airline.slice(0,airline.lastIndexOf(" ")));
 console.log(airline.slice(airline.lastIndexOf(" ") + 1) );
 
 
+const question = new Map([
+    ["qeustion", "what is your favorit porgramming language"],
+    [1,"c"],
+    [2,"rust"],
+    [3,"go"],
+    [4,"javascript"],
+    ["correct",4],
+    [true,"correct"],
+    [false,"try it again"],
+]);
 
 
+
+
+
+
+console.log(question.get(question));
+
+for(const [key,value]  of question ){
+    if(typeof key === "number"){
+        console.log(`answer ${key} : ${value}`);
+      
+    };
+};
+
+
+const answer = Number (prompt("what you are thinking ??"));
+console.log(answer);
+
+console.log(question.get(question.get("correct") === answer));
+
+// console.log(question.get(1));
+// console.log(question.get(2));
+
+// console.log(Object.entries(openingHours));
+
+// // turning object into mapsssssssssssss haha hahahaah ahahah ahhaahahhahhahahahahahh 
+
+// const hoursMap = new Map(Object.entries(openingHours));
+
+// console.log(hoursMap);
 
