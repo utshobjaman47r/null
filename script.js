@@ -717,14 +717,14 @@ console.log(answer);
 
 console.log(question.get(question.get("correct") === answer));
 
-// console.log(question.get(1));
-// console.log(question.get(2));
+console.log(question.get(1));
+console.log(question.get(2));
 
-// console.log(Object.entries(openingHours));
+console.log(Object.entries(openingHours));
 
-// // turning object into mapsssssssssssss haha hahahaah ahahah ahhaahahhahhahahahahahh 
+// turning object into mapsssssssssssss haha hahahaah ahahah ahhaahahhahhahahahahahh 
 
-// const hoursMap = new Map(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
 
-// console.log(hoursMap);
+console.log(hoursMap);
 
