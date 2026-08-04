@@ -746,3 +746,21 @@ console.log([...question.values()]);
 
 console.log("hello  bushra i wanna say you something ......... ");
 
+
+const middleSeat =  function(seat){
+    // B and E are the middle seat 
+
+    const s = seat.slice(-1);
+    if(s === "B" || s === "E" ){
+        console.log("you got the middle seat ha ha fuck you ");
+
+    }else{
+        console.log("you got the window seat congratulation you can now see the sky ");
+    };
+
+
+};
+
+middleSeat("11B");
+middleSeat("11C");
+middleSeat("11E");
