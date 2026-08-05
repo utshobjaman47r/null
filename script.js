@@ -792,3 +792,35 @@ console.log(new String("utshob"));
 console.log(typeof new String("uthosb"));
 console.log(typeof new String("uthsob").slice(-1));
 
+console.log("i wanna make a lot of money".split(" "));
+
+
+const [firstName ,middleName ,lastName] = "Bushra afzal onty ".split(" ");
+console.log(firstName);
+console.log(middleName);
+console.log(lastName);
+
+const newName = ["Ms",firstName,lastName.toUpperCase()].join("---");
+console.log(newName);
+
+
+
+const capitalizedName = function(name){
+    const names = name.split(" ");
+    const nameUpperCase = [];                          
+
+    for(const n of names){
+        nameUpperCase.push(n[0].toUpperCase() + n.slice(1));
+
+    };
+    console.log(nameUpperCase.join(" "));
+
+
+};
+capitalizedName("Bushra afzal onty");
+capitalizedName("Lutfor jaman utshob");
+
+
+const nullAnd  =  " lutfor jaman utshob ".trim();
+console.log(nullAnd);
+ 

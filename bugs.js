@@ -241,3 +241,6 @@ console.log(values);
 
 
 
+const life = ["me", "my father","my mother","my ugly sister"].join("....");
+
+console.log(life);
