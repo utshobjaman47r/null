@@ -764,3 +764,31 @@ const middleSeat =  function(seat){
 middleSeat("11B");
 middleSeat("11C");
 middleSeat("11E");
+
+
+
+const middleSeaT = function(seat){
+
+    const s = seat.slice(-1);
+    if(s === "B" || s === "E"){
+        console.log("you have a bad luck like me ");
+    } else {
+        console.log("you have got the window now see the butiful sky");
+    };
+
+};
+
+middleSeaT("11B");
+middleSeaT("11T");
+middleSeaT("11B");
+middleSeaT("11K");
+middleSeaT("11L");
+middleSeaT("11R");
+middleSeaT("11E");
+middleSeaT("11F");
+
+//when we write string js put into the object and that's  called boxing
+console.log(new String("utshob"));
+console.log(typeof new String("uthosb"));
+console.log(typeof new String("uthsob").slice(-1));
+
