@@ -821,6 +821,12 @@ capitalizedName("Bushra afzal onty");
 capitalizedName("Lutfor jaman utshob");
 
 
-const nullAnd  =  " lutfor jaman utshob ".trim();
-console.log(nullAnd);
- 
+
+//padding 
+
+const some = "one day you will lost yourself";
+
+console.log(some.padStart(32,"--").padEnd(45,"-"));
+
+
+

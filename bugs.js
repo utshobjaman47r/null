@@ -244,3 +244,25 @@ console.log(values);
 const life = ["me", "my father","my mother","my ugly sister"].join("....");
 
 console.log(life);
+
+
+const nullAnd  =  " lutfor jaman utshob ".trim();
+console.log(nullAnd);
+ 
+
+
+
+const capitalizedName = function(name){
+    const names = name.split(" ");
+    const nameUpperCase = [];                          
+
+    for(const n of names){
+        nameUpperCase.push(n[0].toUpperCase());
+
+    };
+    console.log(nameUpperCase.join(" "));
+
+
+};
+capitalizedName("Bushra afzal onty");
+capitalizedName("Lutfor jaman utshob");
