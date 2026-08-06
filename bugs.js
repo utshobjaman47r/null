@@ -266,3 +266,19 @@ const capitalizedName = function(name){
 };
 capitalizedName("Bushra afzal onty");
 capitalizedName("Lutfor jaman utshob");
+
+
+
+const craditCardNumber = function(num){
+  const str = num + "";
+  const last = str.slice(-4).padStart(str.length,"*")
+  console.log(last);
+
+
+
+};
+
+craditCardNumber(12458968532);
+craditCardNumber(12458969685);
+craditCardNumber("12458965632");
+craditCardNumber(1245850);

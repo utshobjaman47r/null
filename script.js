@@ -822,11 +822,37 @@ capitalizedName("Lutfor jaman utshob");
 
 
 
-//padding 
+// string padding 
 
 const some = "one day you will lost yourself";
 
-console.log(some.padStart(32,"--").padEnd(45,"-"));
+console.log(some.padStart(45,"i am batman ").padEnd(100 ," i am batman "));
+
+const craditCardNumber =  function(number){
+    const str = number + "";
+    const last = str.slice(-4).padStart(str.length,"*");
+    return last
+
+};
 
 
+console.log( craditCardNumber(15458965231));
+console.log(craditCardNumber(14578623584));
+console.log(craditCardNumber("12457896524"));
 
+
+// repate 
+const who = "i am batman ";
+const creator = "allah subhanallhattala ";
+
+console.log(creator.repeat(1));
+console.log(who.repeat(1));
+
+
+const planes = function(n){
+    console.log(`the plan ${n} are avialbale ${' ✈️ '.repeat(n)}`);
+};
+
+planes(3);
+planes(5);
+planes(6);
