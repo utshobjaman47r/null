@@ -39,23 +39,67 @@ const bushra = {
     passport: 2254575235
 };
 
-const checkIn = function(flightNum, passenger) {
-    // Reassigning a primitive variable locally
-    flightNum = "BTNW47R"; 
+// const checkIn = function(flightNum, passenger) {
+//     // Reassigning a primitive variable locally
+//     flightNum = "BTNW47R"; 
 
-    // Mutating the object's property directly
-    passenger.name = "Ms. " + passenger.name;
+//     // Mutating the object's property directly
+//     passenger.name = "Ms. " + passenger.name;
 
-    // Check passport number
-    if (passenger.passport === 2254575235) {
-        alert("Checked in successfully!");
-    } else {
-        alert("Wrong passport!");
-    }
+//     // Check passport number
+//     if (passenger.passport === 2254575235) {
+//         alert("Checked in successfully!");
+//     } else {
+//         alert("Wrong passport!");
+//     }
+// };
+
+// // 2. Pass the defined variables into the function
+// checkIn(flight, bushra);
+
+// console.log(flight);       // "LH182" (Unchanged!)
+// console.log(bushra.name);  // "Ms. Bushra" (Mutated!)
+
+
+// const checkIN2 = function(flightNum,passenger){
+//     flightNum = "MTR";
+//     passenger.name = "MS" + passenger.name ;
+
+//     if(passenger.passport === 2254575235 ){
+//         alert("sucecesfully checked in ")
+
+//     }else{
+//         alert("sorry for today ")
+//     }
+
+// };
+
+// checkIN2(flight,bushra);
+
+// console.log(flight);
+// console.log(bushra);
+
+// const newPassoport = function(person){
+//     person.passport = Math.trunc(Math.random() * 100000000000)
+// };
+
+// newPassoport(bushra);
+// checkIN2(flight,bushra);
+
+const oneWord =  function(str){
+    return str.replace(/ /g,"").toLowerCase();
 };
 
-// 2. Pass the defined variables into the function
-checkIn(flight, bushra);
+const upperCase = function(str){
+    const [first,...others] = str.split(" ").join(" ");
+    return [first.toUpperCase(),...others].join(" ");  
+};
 
-console.log(flight);       // "LH182" (Unchanged!)
-console.log(bushra.name);  // "Ms. Bushra" (Mutated!)
+const transform = function(str,fnc){
+    console.log(`the original text : ${str}`);
+    console.log(`the transfrm text ${fnc(str)}`);
+    console.log(`transformed by ${fnc.name}`)
+};
+
+transform("bushra is the most buetiful girl in the planet ", upperCase);
+
