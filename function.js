@@ -33,29 +33,53 @@
 
 
 // 1. Declare the object and string first
-const flight = "LH182";
-const bushra = {
-    name: "Bushra",
-    passport: 2254575235
-};
+// const flight = "LH182";
+// const bushra = {
+//     name: "Bushra",
+//     passport: 2254575235
+// };
 
-const checkIn = function(flightNum, passenger) {
-    // Reassigning a primitive variable locally
-    flightNum = "BTNW47R"; 
+// const checkIn = function(flightNum, passenger) {
+//     // Reassigning a primitive variable locally
+//     flightNum = "BTNW47R"; 
 
-    // Mutating the object's property directly
-    passenger.name = "Ms. " + passenger.name;
+//     // Mutating the object's property directly
+//     passenger.name = "Ms. " + passenger.name;
 
-    // Check passport number
-    if (passenger.passport === 2254575235) {
-        alert("Checked in successfully!");
-    } else {
-        alert("Wrong passport!");
+//     // Check passport number
+//     if (passenger.passport === 2254575235) {
+//         alert("Checked in successfully!");
+//     } else {
+//         alert("Wrong passport!");
+//     }
+// };
+
+// // 2. Pass the defined variables into the function
+// checkIn(flight, bushra);
+
+// console.log(flight);       // "LH182" (Unchanged!)
+// console.log(bushra.name);  // "Ms. Bushra" (Mutated!)
+
+
+
+// const greet = function(greetings){
+//     return function(name){
+//         console.log(`${greetings} ${name}`)
+//     }
+
+// };
+
+// const heyGreegins = greet("hey");
+
+// heyGreegins("Bushra");
+
+
+const greetingsF = function(greetings){
+    return function(name){
+        console.log(`${greetings} ${name}`)
     }
 };
 
-// 2. Pass the defined variables into the function
-checkIn(flight, bushra);
-
-console.log(flight);       // "LH182" (Unchanged!)
-console.log(bushra.name);  // "Ms. Bushra" (Mutated!)
+const greetYou =greetingsF("hey");
+greetYou("Bushra");
+greetYou("Utshob");
