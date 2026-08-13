@@ -62,24 +62,24 @@
 
 
 
-// const greet = function(greetings){
-//     return function(name){
-//         console.log(`${greetings} ${name}`)
-//     }
-
-// };
-
-// const heyGreegins = greet("hey");
-
-// heyGreegins("Bushra");
-
-
-const greetingsF = function(greetings){
+const greet = function(greetings){
     return function(name){
         console.log(`${greetings} ${name}`)
     }
+
 };
 
-const greetYou =greetingsF("hey");
-greetYou("Bushra");
-greetYou("Utshob");
+const heyGreegins = greet("hey");
+
+heyGreegins("Bushra");
+
+
+// const greetingsF = function(greetings){
+//     return function(name){
+//         console.log(`${greetings} ${name}`)
+//     }
+// };
+
+// const greetYou =greetingsF("hey");
+// greetYou("Bushra");
+// greetYou("Utshob");
