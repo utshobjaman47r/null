@@ -841,7 +841,7 @@ console.log(craditCardNumber(14578623584));
 console.log(craditCardNumber("12457896524"));
 
 
-// repate 
+// repeate 
 const who = "i am batman ";
 const creator = "allah subhanallhattala ";
 

@@ -81,6 +81,10 @@ const greetA = (greetings) => {
         
 };
 
+const greetSupperArrow = greetings => name=> console.log(`${greetings} ${name}`);
+
+greetSupperArrow("hi")("bushra");
+
 // const greetingsF = function(greetings){
 //     return function(name){
 //         console.log(`${greetings} ${name}`)
@@ -92,3 +96,48 @@ const greetA = (greetings) => {
 // greetYou("Utshob");
 
 
+const lufthansa = {
+    airline  : "lufhansa",
+    iatacode : "LH",
+    bookings : [],
+    book : function(flightName,name){
+        console.log(`${name} booked a seat 
+            on ${this.airline} flight ${this.iatacode} ${flightName}`)
+
+    }
+};
+
+lufthansa.book("B11","Bushra");
+lufthansa.book("bat","uthosb");
+
+
+
+// const speak = function(speaking){
+//     console.log("hi my name is " + this.name)
+
+// };
+
+// const robot1 = {
+//     name :"bibo",
+//     talk : speak
+// }
+
+// speak.talk();
+
+
+const speak = function(speaking){
+    console.log('hello i am ' + this.name)
+};
+
+
+const robort1 = {
+    name : "bimo",
+    talk : speak
+};
+
+const robort2 = {
+    name : "terminator",
+    talk : speak
+}
+robort1.talk();
+robort2.talk();
