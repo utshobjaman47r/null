@@ -69,10 +69,17 @@ const greet = function(greetings){
 
 };
 
-const heyGreegins = greet("hey");
+const heyGreegins = greet("hey you are too much beautiful");
 
 heyGreegins("Bushra");
 
+
+const greetA = (greetings) => {
+    return (name)=> {
+        console.log(`${greetings} ${name}`)
+    };
+        
+};
 
 // const greetingsF = function(greetings){
 //     return function(name){
@@ -83,3 +90,5 @@ heyGreegins("Bushra");
 // const greetYou =greetingsF("hey");
 // greetYou("Bushra");
 // greetYou("Utshob");
+
+
