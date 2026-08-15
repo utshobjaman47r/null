@@ -159,8 +159,25 @@ console.log(euroWings);
 book.call(lufthansa,"bat10","batman");
 console.log(lufthansa);
 
+const swiss = {
+    airline :"swissAirline",
+    iatacode : "s100",
+    bookings : [],
+};
+
+book.call(swiss,"Rm800","the terminator");
+
+console.log(swiss);
 
 
+const fligtData = ["DrCLA","lord orlock"];
+
+book.apply(swiss,fligtData);
+console.log(swiss);
+
+book.call(swiss,...fligtData);
+
+console.log(swiss);
 
 
 
