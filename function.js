@@ -94,24 +94,6 @@ greetSupperArrow("hi")("bushra");
 // const greetYou =greetingsF("hey");
 // greetYou("Bushra");
 // greetYou("Utshob");
-
-
-const lufthansa = {
-    airline  : "lufhansa",
-    iatacode : "LH",
-    bookings : [],
-    book : function(flightName,name){
-        console.log(`${name} booked a seat 
-            on ${this.airline} flight ${this.iatacode} ${flightName}`)
-
-    }
-};
-
-lufthansa.book("B11","Bushra");
-lufthansa.book("bat","uthosb");
-
-
-
 // const speak = function(speaking){
 //     console.log("hi my name is " + this.name)
 
@@ -141,3 +123,46 @@ const robort2 = {
 }
 robort1.talk();
 robort2.talk();
+
+const lufthansa = {
+    airline  : "lufhansa",
+    iatacode : "LH",
+    bookings : [],
+    book : function(flightName,name){
+        console.log(`${name} booked a seat on ${this.airline} flight ${this.iatacode} ${flightName}`)
+        // this.bookings.push({flight:`${this.iatacode} ${flightName}`,name})
+        this.bookings.push({flight:`${this.iatacode} ${flightName}`, name })
+
+
+    }
+    
+};
+
+lufthansa.book("B11","Bushra");
+lufthansa.book("bat","uthosb");
+
+
+const euroWings = {
+    airline : "ewrowings",
+    iatacode : "Ew11",
+    bookings: []
+};
+
+const book = lufthansa.book; // by this the function can be outside ot the lufthansa object 
+// it dose not work because this get confuesd who is calling the code 
+// book("b11","Bushra");
+
+book.call(euroWings,"11","Bushra afzal onty");
+console.log(euroWings);
+
+
+book.call(lufthansa,"bat10","batman");
+console.log(lufthansa);
+
+
+
+
+
+
+
+
