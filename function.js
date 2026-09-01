@@ -125,7 +125,7 @@ robort1.talk();
 robort2.talk();
 
 const lufthansa = {
-    airline  : "lufhansa",
+    airline  : "lufthansa",
     iatacode : "LH",
     bookings : [],
     book : function(flightName,name){
@@ -181,5 +181,35 @@ console.log(swiss);
 
 
 
+const oneWord = function(str) {
+    return str.replace(/ /g, "").toLowerCase();
+};
+
+console.log(oneWord("Hello World JavaScript")); 
+// Output: "helloworldjavascript"
+
+const upperCase = function(str){
+    const [first,...others]=str.split(" ");
+    return [first.toLowerCase(),...others].join(" ");
+};
+
+console.log(upperCase("i am the face of stone "));
+
+const tranfromed = function(str,fn){
+    console.log(`the stirng `)
+
+    console.log(`the trasformed function is ${fn(str)}`)
+    console.log(`the named of the functions that transform your fucking bullsit codes into a polishedm ${fn.name} `)
+
+
+};
+
+tranfromed('i belings to null ',upperCase);  
+
+
+const addTax =  (value,rate) => value + value * rate ;
+
+
+console.log(addTax(10,200));
 
 
