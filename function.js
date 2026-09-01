@@ -207,9 +207,28 @@ const tranfromed = function(str,fn){
 tranfromed('i belings to null ',upperCase);  
 
 
-const addTax =  (value,rate) => value + value * rate ;
+// const addTax =  (value,rate) => value + value * rate ;
 
 
-console.log(addTax(10,200));
+// console.log(addTax(10,200));
 
+
+const taxes =  (rate,value) => value + value * rate;
+
+console.log(taxes(10,0.15));
+
+const addvat = taxes.bind(null,0.23);
+
+console.log(addvat(100));
+
+
+const addtaxes =  (rate) => {
+    return(value) => value + value * rate
+
+    
+};
+
+const addvatT = addtaxes(0.23);
+
+console.log(addvat(100));
 
