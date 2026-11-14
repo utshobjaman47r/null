@@ -109,7 +109,7 @@ const {home:house} = batman;
 const villain = {};
 
 // Use destructuring with a default value and the out put should be unkown 
-const {thing = "unkown" } =villain
+const {thing = "unknown" } =villain
 console.log(thing);
 
 // const villain = {};
@@ -135,22 +135,22 @@ const missionDossier = {
   location: "Mumbai Base",
 };
 
-const {codename:commando, location : farmehouse } = missionDossier;
+const {codename:commando, location : base } = missionDossier;
 
-console.log(commando,farmehouse);
+console.log(commando,base);
 
 
-const add2 = function(...num){
-    let minus = num[0];
-    for(let i = 0; i< num.length ; i++)
-        minus = minus - num[i];
-    console.log(minus)
+const subtractNumbers = function(...numbers){
+    let result = numbers[0];
+    for(let i = 1; i < numbers.length; i++)
+        result = result - numbers[i];
+    console.log(result)
 
 };
 
-add2(2 , 2);
-add2(2,3,4,89,7);
-add2(8,7,96,1000); 
+subtractNumbers(2, 2);
+subtractNumbers(2, 3, 4, 89, 7);
+subtractNumbers(8, 7, 96, 1000);
 
 console.log("Batman" || "Superman"); 
 console.log(false || 0 || "" || "Iron Man" || 42);
@@ -184,7 +184,7 @@ for(const[i,f] of fruits.entries()){
 const students = ["Alice", "Bob", "Charlie"];
 
 for(const [i,name] of students.entries()){
-  console.log(`studnet #${i + 1 } is ${name} `)
+  console.log(`student #${i + 1} is ${name}`)
 };
 
 
@@ -200,8 +200,8 @@ console.log(rk9);
 const movies = ["Inception", "Titanic", "Coco"];
 
 
-for(const [i,moivesName]  of movies.entries() ){
-  console.log(`show time #${i +1 } : ${moivesName}`)
+for(const [i,movieName] of movies.entries()){
+  console.log(`show time #${i + 1}: ${movieName}`)
 
 
 };
@@ -210,9 +210,9 @@ for(const [i,moivesName]  of movies.entries() ){
 const tasks = ["Buy groceries", "Walk the dog", "Finish homework", "Call mom"];
 
 for(const[i,work] of tasks.entries()){
-  const postion = i + 1;
-  if(postion % 2 === 0 ){
-    console.log(`task number ${postion} : task${work}`)
+  const position = i + 1;
+  if(position % 2 === 0){
+    console.log(`task number ${position}: ${work}`)
 
   }
 
@@ -252,24 +252,20 @@ console.log(nullAnd);
 
 
 
-const capitalizedName = function(name){
-    const names = name.split(" ");
-    const nameUpperCase = [];                          
-
-    for(const n of names){
-        nameUpperCase.push(n[0].toUpperCase());
-
-    };
-    console.log(nameUpperCase.join(" "));
-
-
+const capitalizeName = function(name){
+    return name
+        .trim()
+        .split(/\s+/)
+        .filter(Boolean)
+        .map(word => word[0].toUpperCase() + word.slice(1).toLowerCase())
+        .join(" ");
 };
-capitalizedName("Bushra afzal onty");
-capitalizedName("Lutfor jaman utshob");
+console.log(capitalizeName("Bushra afzal onty"));
+console.log(capitalizeName("Lutfor jaman utshob"));
 
 
 
-const craditCardNumber = function(num){
+const creditCardNumber = function(num){
   const str = num + "";
   const last = str.slice(-4).padStart(str.length,"*")
   console.log(last);
@@ -278,9 +274,51 @@ const craditCardNumber = function(num){
 
 };
 
-craditCardNumber(12458968532);
-craditCardNumber(12458969685);
-craditCardNumber("12458965632");
-craditCardNumber(1245850);
+creditCardNumber(12458968532);
+creditCardNumber(12458969685);
+creditCardNumber("12458965632");
+creditCardNumber(1245850);
 
 
+const bugBookings = [];
+
+const createBookings = function(flightNum = 'g12',numberOfPassenger =1,price = numberOfPassenger * 199){
+
+  const booking = {
+    flightNum,
+    numberOfPassenger,
+    price
+  };
+
+  console.log(booking);
+  bugBookings.push(booking)
+
+};
+
+createBookings("lh1",200);
+createBookings("lh2");
+createBookings("lh2",undefined,150);
+createBookings("lh2",450,);
+
+
+const flight = "mk209";
+const stive = {
+  name : "stive williams ",
+  passport : 12457963520,
+}
+
+const checkIn = function(flightNum,passenger){
+  passenger.name = "MR " + passenger.name.trim();
+
+  if(passenger.passport ===  12457963520 ){
+    alert(`Check-in complete for flight ${flightNum}`);
+
+  }else{
+    alert("Check-in incomplete");
+  }
+
+};
+
+checkIn(flight,stive);
+console.log(flight);
+console.log(stive);
