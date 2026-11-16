@@ -86,20 +86,26 @@ const bushra = {
 // newPassoport(bushra);
 // checkIN2(flight,bushra);
 
-const oneWord =  function(str){
-    return str.replace(/ /g,"").toLowerCase();
+const oneWord = function(str) {
+    return str.replace(/ /g, "").toLowerCase();
 };
 
-const upperCase = function(str){
-    const [first,...others] = str.split(" ").join(" ");
-    return [first.toUpperCase(),...others].join(" ");  
+const upperCase = function(str) {
+    // 1. Remove .join(" ") from here so 'names' stays an array of words
+    const [first, ...others] = str.trim().split(" ");
+    
+    // 2. Uppercase the entire first word and join the rest back with spaces
+    return [first.toUpperCase(), ...others].join(" ");  
 };
 
-const transform = function(str,fnc){
-    console.log(`the original text : ${str}`);
-    console.log(`the transfrm text ${fnc(str)}`);
-    console.log(`transformed by ${fnc.name}`)
+const transform = function(str, fnc) {
+    console.log(`The original text: ${str}`);
+    console.log(`The transformed text: ${fnc(str)}`);
+    console.log(`Transformed by: ${fnc.name}`);
 };
 
-transform("bushra is the most buetiful girl in the planet ", upperCase);
+transform("bushra is the most beautiful girl in the planet", upperCase);
 
+console.log("bushra you are the most beautiful girl i have ever seen ");
+
+console.log("wnna lost  in null ")
