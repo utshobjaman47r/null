@@ -1,20 +1,22 @@
 "use strict";
 
-// const bookings = []; // sotring the objcet inside the array  
+const bookings = []; // sotring the objcet inside the array  
 
-// const createBooking  =  function(numPassenger = 1 ,flightNum = "HH1" ,price =199 * numPassenger){
-//     // ES 5 ugley boiler plate 
-//     // numPassenger = numPassenger || 1;
-//     // price = price || 199;
-//     const booking = {
-//         numPassenger,
-//         flightNum,
-//         price,
-//     };
-//     console.log(booking);
-//     bookings.push(booking);
+const createBooking  =  function(numPassenger = 1 ,flightNum = "HH1" ,price =199 * numPassenger){
+    // ES 5 ugley boiler plate 
+    // numPassenger = numPassenger || 1;
+    // price = price || 199;
+    const booking = {
+        numPassenger,
+        flightNum,
+        price,
+    };
+    console.log(booking);
+    bookings.push(booking);
 
-// };
+};
+
+createBooking(10,"llhb",200);
 
 // createBooking("5","LH11",2500);
 // createBooking(undefined,'B85L');
@@ -33,11 +35,11 @@
 
 
 // 1. Declare the object and string first
-const flight = "LH182";
-const bushra = {
-    name: "Bushra",
-    passport: 2254575235
-};
+// const flight = "LH182";
+// const bushra = {
+//     name: "Bushra",
+//     passport: 2254575235
+// };
 
 // const checkIn = function(flightNum, passenger) {
 //     // Reassigning a primitive variable locally
@@ -61,51 +63,176 @@ const bushra = {
 // console.log(bushra.name);  // "Ms. Bushra" (Mutated!)
 
 
-// const checkIN2 = function(flightNum,passenger){
-//     flightNum = "MTR";
-//     passenger.name = "MS" + passenger.name ;
 
-//     if(passenger.passport === 2254575235 ){
-//         alert("sucecesfully checked in ")
+const greet = function(greetings){
+    return function(name){
+        console.log(`${greetings} ${name}`)
+    }
 
-//     }else{
-//         alert("sorry for today ")
+};
+
+const heyGreegins = greet("hey you are too much beautiful");
+
+heyGreegins("Bushra");
+
+
+const greetA = (greetings) => {
+    return (name)=> {
+        console.log(`${greetings} ${name}`)
+    };
+        
+};
+
+const greetSupperArrow = greetings => name=> console.log(`${greetings} ${name}`);
+
+greetSupperArrow("hi")("bushra");
+
+// const greetingsF = function(greetings){
+//     return function(name){
+//         console.log(`${greetings} ${name}`)
 //     }
+// };
+
+// const greetYou =greetingsF("hey");
+// greetYou("Bushra");
+// greetYou("Utshob");
+// const speak = function(speaking){
+//     console.log("hi my name is " + this.name)
 
 // };
 
-// checkIN2(flight,bushra);
+// const robot1 = {
+//     name :"bibo",
+//     talk : speak
+// }
 
-// console.log(flight);
-// console.log(bushra);
+// speak.talk();
 
-// const newPassoport = function(person){
-//     person.passport = Math.trunc(Math.random() * 100000000000)
-// };
 
-// newPassoport(bushra);
-// checkIN2(flight,bushra);
+const speak = function(speaking){
+    console.log('hello i am ' + this.name)
+};
+
+
+const robort1 = {
+    name : "bimo",
+    talk : speak
+};
+
+const robort2 = {
+    name : "terminator",
+    talk : speak
+}
+robort1.talk();
+robort2.talk();
+
+const lufthansa = {
+    airline  : "lufthansa",
+    iatacode : "LH",
+    bookings : [],
+    book : function(flightName,name){
+        console.log(`${name} booked a seat on ${this.airline} flight ${this.iatacode} ${flightName}`)
+        // this.bookings.push({flight:`${this.iatacode} ${flightName}`,name})
+        this.bookings.push({flight:`${this.iatacode} ${flightName}`, name })
+
+
+    }
+    
+};
+
+lufthansa.book("B11","Bushra");
+lufthansa.book("bat","uthosb");
+
+
+const euroWings = {
+    airline : "ewrowings",
+    iatacode : "Ew11",
+    bookings: []
+};
+
+const book = lufthansa.book; // by this the function can be outside ot the lufthansa object 
+// it dose not work because this get confuesd who is calling the code 
+// book("b11","Bushra");
+
+book.call(euroWings,"11","Bushra afzal onty");
+console.log(euroWings);
+
+
+book.call(lufthansa,"bat10","batman");
+console.log(lufthansa);
+
+const swiss = {
+    airline :"swissAirline",
+    iatacode : "s100",
+    bookings : [],
+};
+
+book.call(swiss,"Rm800","the terminator");
+
+console.log(swiss);
+
+
+const fligtData = ["DrCLA","lord orlock"];
+
+book.apply(swiss,fligtData);
+console.log(swiss);
+
+book.call(swiss,...fligtData);
+
+console.log(swiss);
+
+
 
 const oneWord = function(str) {
     return str.replace(/ /g, "").toLowerCase();
 };
 
-const upperCase = function(str) {
-    // 1. Remove .join(" ") from here so 'names' stays an array of words
-    const [first, ...others] = str.trim().split(" ");
+console.log(oneWord("Hello World JavaScript")); 
+// Output: "helloworldjavascript"
+
+const upperCase = function(str){
+    const [first,...others]=str.split(" ");
+    return [first.toLowerCase(),...others].join(" ");
+};
+
+console.log(upperCase("i am the face of stone "));
+
+const tranfromed = function(str,fn){
+    console.log(`the stirng `)
+
+    console.log(`the trasformed function is ${fn(str)}`)
+    console.log(`the named of the functions that transform your fucking bullsit codes into a polishedm ${fn.name} `)
+
+
+};
+
+tranfromed('i belings to null ',upperCase);  
+
+
+// const addTax =  (value,rate) => value + value * rate ;
+
+
+// console.log(addTax(10,200));
+
+
+const taxes =  (rate,value) => value + value * rate;
+
+console.log(taxes(10,0.15));
+
+const addvat = taxes.bind(null,0.23);
+
+console.log(addvat(100));
+
+
+const addtaxes =  (rate) => {
+    return(value) => value + value * rate
+
     
-    // 2. Uppercase the entire first word and join the rest back with spaces
-    return [first.toUpperCase(), ...others].join(" ");  
 };
 
-const transform = function(str, fnc) {
-    console.log(`The original text: ${str}`);
-    console.log(`The transformed text: ${fnc(str)}`);
-    console.log(`Transformed by: ${fnc.name}`);
-};
+const addvatT = addtaxes(0.23);
 
-transform("bushra is the most beautiful girl in the planet", upperCase);
+console.log(addvat(100));
 
-console.log("bushra you are the most beautiful girl i have ever seen ");
 
-console.log("wnna lost  in null ")
+console.log("hello world ");
